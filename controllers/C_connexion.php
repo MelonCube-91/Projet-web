@@ -1,6 +1,8 @@
 <?php
 require "../Models/m_utilisateur.php";
 
+session_start();
+
 // Afficher la page par défaut
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     require "../Views/page_Connexion.php";
@@ -25,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["connexion"])) {
             array_push($erreurs, "Votre email n'existe pas.");
         } else {
             if (password_verify($motdepasse, $utilisateur["motdepasse"])) {
-                echo "Connexion réussie. Bienvenue, " . htmlspecialchars($utilisateur["nom"]) . " " . htmlspecialchars($utilisateur["prenom"]) . "!";
+                require "../views/page_accueil.php";
                 exit();
             } else {
                 array_push($erreurs, "Mot de passe incorrect.");

@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Vous êtes bien inscris</h1>
+    <a href="../controllers/C_connexion.php">Se Connecter</a>
 </body>
 </html>

@@ -24,5 +24,9 @@ function verification_utilisateur($email){
     return $result;
 };
 
-
-
+function get_all_utilisateurs() {
+    require "db_connect.php";
+    $stmt = $connect->prepare("SELECT id_utilisateur, nom, prenom, email FROM utilisateur");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}

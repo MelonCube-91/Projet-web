@@ -33,14 +33,15 @@ CREATE TABLE réservation (
 );
 
 CREATE TABLE avis (
-  id_avis INT AUTO_INCREMENT PRIMARY KEY,
-  id_utilisateur INT,
-  id_chambre INT,
-  note INT CHECK (note >= 1 AND note <= 5),
-  commentaire TEXT,
-  date_avis DATETIME NOT NULL,
-  FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur),
-  FOREIGN KEY (id_chambre) REFERENCES chambre(id_chambre)
+    id_avis INT AUTO_INCREMENT PRIMARY KEY,
+    id_utilisateur INT,
+    id_chambre INT,
+    commentaire TEXT,
+    note INT, 
+    date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
+    statut ENUM('validé', 'en attente', 'rejeté') DEFAULT 'en attente',
+    FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur),
+    FOREIGN KEY (id_chambre) REFERENCES chambre(id_chambre)
 );
 
 CREATE TABLE massage (
@@ -49,6 +50,7 @@ CREATE TABLE massage (
   description TEXT,
   prix DECIMAL(10,2) NOT NULL
 );
+
 
 CREATE TABLE contact (
   id_contact INT AUTO_INCREMENT PRIMARY KEY,
