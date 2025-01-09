@@ -32,7 +32,9 @@
       <h1>Bienvenue à La Flèche d'Argent !</h1>
       <p>Un séjour 5 étoiles au cœur de Bordeaux, où chaque instant devient un souvenir précieux.</p>
       <p>58 6a Place du Maucaillou, Bordeaux.</p>
-      <button class="btn-primary" onclick="window.location.href='https://www.google.com';">Réserver une chambre </button>
+      <button class="btn-primary" onclick="window.location.href='page_toutes_les_chambres.php';">
+  Réserver une chambre
+</button>
       <p>ou</p>
       <button class="btn-primary" onclick="window.location.href='https://www.google.com';">Réserver une table</button>
     </div>
