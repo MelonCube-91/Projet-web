@@ -21,8 +21,9 @@
                     <li><a href="chambres.php">Chambres</a></li>
                     <li><a href="restaurant.php">Restaurant</a></li>
                     <li><a href="relaxation.php">Relaxation</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="../views/page_contact.php">Contact</a></li>
                     <li><a href="../controllers/C_inscription.php">Inscription</a></li>
+                    <li><a href="../controllers/C_deconnexion.php">Déconnexion</a></li>
                 </ul>
             </nav>
         </div>
