@@ -1,0 +1,113 @@
+/* Style de base */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(174, 133, 83);
+    padding: 15px 30px;
+    color: white;
+    
+  }
+ 
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #FFD700;
+  }
+  
+    
+  
+ 
+ /* Section Chambres */
+.chambres {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .chambres h2 {
+    margin-bottom: 30px;
+  }
+  
+  .room-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 10px 15px; /* Réduction de l'espace horizontal et vertical */
+    justify-items: center;
+  }
+  
+  .room {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .room:hover {
+    transform: translateY(-5px); /* Légère animation au survol */
+  }
+  
+  .room img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .room h3 {
+    margin: 15px 0;
+  }
+  
+  .room p {
+    padding: 0 10px;
+  }
+  
+  .btn-secondary {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #444;
+  }
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(174, 133, 83);
+    padding: 15px 30px;
+    color: white;
+    
+  }

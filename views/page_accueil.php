@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/page_accueil.css">
-  <title>La Flèche Bordeaux</title>
+  <title href="page_toutes_les_chambres.php">La Flèche Bordeaux</title>
 </head>
 
 <header>
@@ -13,12 +13,12 @@
     <div class="logo">La Flèche d'Argent Bordeaux</div>
    
     <ul class="nav-links">
-      <li><a href="#home">Accueil</a></li>
-      <li><a href="#rooms">Chambres</a></li>
+      <li><a href="page_accueil.php">Accueil</a></li>
+      <li><a href="page_toutes_les_chambres.php">Chambres</a></li>
       <li><a href="#services">Restaurant</a></li>
       <li><a href="#contact">Contact</a></li>
      
-      <li><a href="#login">Connexion</a></li>
+      <li><a href="page_connexion.php">Connexion</a></li>
     </ul>
   </nav>
 

@@ -7,6 +7,7 @@
 <body>
     <h1>Connexion</h1>
     <form action="../Controllers/C_connexion.php" method="POST">
+        
         <label for="email">Email :</label>
         <input type="email" name="email" id="email" required>
         <br>
