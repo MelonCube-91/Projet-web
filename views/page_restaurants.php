@@ -27,11 +27,11 @@
         <div class="content">
             <div class="content-left">
                 <div class="info">
-                <h2>Order Your Best <br>Food anytime</h2>
-                <p>Hey, Our delicious food is waiting for you, <br>
-                    We are always near to you with fresh item of food </p>
+                <h2>Léonardo du restaurant Foodio, notre expert en cuisine italienne <h2>"Good plate = Good day !"</h2>
+                <p>Hey ! Vos plats favoris n'attendent que vous ! <br>
+                    Voyager en Italie en goûtant à la cuisine de Léonardo ! </p>
             </div>
-            <button>Explore Food</button>
+            <button>Voir + de plats</button>
         </div>
             <div class="content-right">
                 <img src="assets/pizza.png" alt="">
@@ -40,7 +40,7 @@
     </section>
     <section class="category">
     <div class="list-items">
-         <h3>Popular Dishes</h3>
+         <h3>Plats populaires</h3>
           <div class ="card-list"> 
             <div class="card"> 
                 <in src="assets/entree.jpg" alt=""> 
@@ -51,7 +51,7 @@
                         <p>Quaerat iusto digniss corporis cupid itate praes entity  
                     </div> 
                     <div class="price"> 
-                        <span>$10.99</span><span><i class="ri-add-circle-fill"></i></span> 
+                        <span>10€</span><span><i class="ri-add-circle-fill"></i></span> 
                     </div> 
                 </div> 
           <div class="card"> 
@@ -63,7 +63,7 @@
                             <p>Quaerat iusto digniss corporis cupid itate praes entity  
                         </div> 
                         <div class="price"> 
-                            <span>$10.99</span><span><i class="ri-add-circle-fill"></i></span> 
+                            <span>12€</span><span><i class="ri-add-circle-fill"></i></span> 
                         </div> 
             </div> 
         </div> 
