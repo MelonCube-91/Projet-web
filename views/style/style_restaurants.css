@@ -237,7 +237,23 @@ input {
     font-weight: 500;
     margin-bottom: 20px;
     font-family: sans-serif;
+}
 
+.category .card .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category .card .price span{
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.category .card .price span .plus-icon{
+    color: #ff511c;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 
