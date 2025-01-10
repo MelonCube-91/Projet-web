@@ -1,20 +1,35 @@
 <?php
-function ajouter_reservation($id_utilisateur, $id_chambre, $date_arrivee, $date_depart, $prix_total) {
+function ajouter_reservation($id_service, $type_service, $date_reservation, $nom, $prenom, $email) {
     require "db_connect.php";
-    
-    $stmt = $connect->prepare("INSERT INTO réservation (id_utilisateur, id_chambre, date_arrivée, date_départ, statut, prix_total) 
-                               VALUES (?, ?, ?, ?, ?, ?)");
-    
-    $statut = 'En attente';  
-    $stmt->execute([$id_utilisateur, $id_chambre, $date_arrivee, $date_depart, $statut, $prix_total]);
-
-    if ($stmt->rowCount() > 0) {
-        error_log("Réservation ajoutée avec succès");
-        return true;
-    } else {
-        error_log("Erreur lors de l'ajout de la réservation");
-        return false;
+    try {
+        $stmt = $connect->prepare("
+            INSERT INTO reservation (id_service, type_service, date_reservation, nom, prenom, email)
+            VALUES (:id_service, :type_service, :date_reservation, :nom, :prenom, :email)
+        ");
+        $stmt->execute([
+            ':id_service' => $id_service,
+            ':type_service' => $type_service,
+            ':date_reservation' => $date_reservation,
+            ':nom' => $nom,
+            ':prenom' => $prenom,
+            ':email' => $email
+        ]);
+        echo "Réservation effectuée avec succès !";
+    } catch (PDOException $e) {
+        echo "Erreur lors de la réservation : " . $e->getMessage();
     }
 }
 
+function get_reservations_par_type($type_service) {
+    require "db_connect.php";
+    $stmt = $connect->prepare("SELECT * FROM reservation WHERE type_service = :type_service");
+    $stmt->execute([':type_service' => $type_service]);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function get_toutes_les_reservations() {
+    require "db_connect.php";
+    $stmt = $connect->query("SELECT * FROM reservation");
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
