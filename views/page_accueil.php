@@ -16,7 +16,7 @@
       <li><a href="page_accueil.php">Accueil</a></li>
       <li><a href="page_toutes_les_chambres.php">Chambres</a></li>
       <li><a href="#services">Restaurant</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Massages</a></li>
      
       <li><a href="page_connexion.php">Connexion</a></li>
     </ul>

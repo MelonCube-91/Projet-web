@@ -41,65 +41,65 @@ body, html {
     
   
  
- /* Section Chambres */
+/* Section Chambres */
 .chambres {
-    padding: 50px;
-    background-color: #f4f4f4;
-    text-align: center;
-  }
-  
-  .chambres h2 {
-    margin-bottom: 30px;
-  }
-  
-  .room-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-    gap: 10px 15px; /* Réduction de l'espace horizontal et vertical */
-    justify-items: center;
-  }
-  
-  .room {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .room:hover {
-    transform: translateY(-5px); /* Légère animation au survol */
-  }
-  
-  .room img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .room h3 {
-    margin: 15px 0;
-  }
-  
-  .room p {
-    padding: 0 10px;
-  }
-  
-  .btn-secondary {
-    background-color: #FFD700;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 0;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #444;
-  }
+  padding: 50px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.chambres h2 {
+  margin-bottom: 20px;
+}
+
+.room-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+  gap: 20px; /* Espacement entre les chambres */
+  justify-items: center;
+}
+
+.room {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 250px; /* Largeur de chaque chambre */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.room:hover {
+  transform: translateY(-5px); /* Animation au survol */
+}
+
+.room img {
+  width: 100%;
+  height: auto;
+}
+
+.room h3 {
+  margin: 15px 0;
+}
+
+.room p {
+  padding: 0 10px;
+}
+
+.btn-secondary {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.btn-secondary:hover {
+  background-color: #444;
+}
 /* Footer */
 
 .footer {

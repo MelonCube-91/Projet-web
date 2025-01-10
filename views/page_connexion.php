@@ -14,20 +14,22 @@ $erreurs_inscription = [];
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">La Flèche d'Argent Bordeaux</div>
-            <ul class="nav-links">
-                <li><a href="page_accueil.php">Accueil</a></li>
-                <li><a href="page_toutes_les_chambres.php">Chambres</a></li>
-                <li><a href="#services">Restaurant</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="page_connexion.php">Connexion</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">La Flèche d'Argent Bordeaux</div>
+   
+    <ul class="nav-links">
+      <li><a href="page_accueil.php">Accueil</a></li>
+      <li><a href="page_toutes_les_chambres.php">Chambres</a></li>
+      <li><a href="#services">Restaurant</a></li>
+      <li><a href="#contact">Massages</a></li>
+     
+      <li><a href="page_connexion.php">Connexion</a></li>
+    </ul>
+  </nav>
 
+</header>
     <!-- Section Connexion et Inscription -->
     <section id="connexion-inscription">
         <div class="form-container">
