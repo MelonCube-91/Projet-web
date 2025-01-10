@@ -1,46 +1,49 @@
 /* Style de base */
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Header */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(174, 133, 83);
-    padding: 15px 30px;
-    color: white;
-    
-  }
- 
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #FFD700;
-  }
-  
-    
-  
- 
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100%; /* S'assurer que body prend toute la hauteur de la fenêtre */
+  display: flex;
+  flex-direction: column; /* Organiser les éléments en colonne (header, main, footer) */
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(174, 133, 83);
+  padding: 15px 30px;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+/* Le contenu principal prend l'espace restant */
+main {
+  flex-grow: 1; /* Permet au contenu de prendre toute la hauteur restante */
+}
+
 /* Section Chambres */
 .chambres {
   padding: 50px;
@@ -55,7 +58,7 @@ body, html {
 .room-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
-  gap: 20px; /* Espacement entre les chambres */
+  gap: 20px;
   justify-items: center;
 }
 
@@ -64,14 +67,14 @@ body, html {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  width: 250px; /* Largeur de chaque chambre */
+  width: 250px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
 .room:hover {
-  transform: translateY(-5px); /* Animation au survol */
+  transform: translateY(-5px);
 }
 
 .room img {
@@ -100,14 +103,19 @@ body, html {
 .btn-secondary:hover {
   background-color: #444;
 }
-/* Footer */
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(174, 133, 83);
-    padding: 15px 30px;
-    color: white;
-    
+/* Footer */
+footer {
+  background-color: rgb(174, 133, 83);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .room-container {
+      grid-template-columns: repeat(2, 1fr); /* Réduire à 2 colonnes sur petits écrans */
   }
+}
