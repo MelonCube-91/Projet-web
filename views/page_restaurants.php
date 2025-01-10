@@ -92,7 +92,7 @@
             <div class="card"> 
                
                     <div class="food-title"> 
-                        <h1>Bordeaux 1990</h1> 
+                        <h1>Bordeaux </h1> 
                     </div> 
                     <div class="desc-food">
                         <p>Burrata accompagné d'une salade.  
