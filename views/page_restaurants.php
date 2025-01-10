@@ -13,13 +13,13 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Menu</a></li>
-            <li><a href="#">Service</a></li>
+            <li><a href="#">Desert</a></li>
             <li><a href="#">à propos de nous</a></li>
-            <li><a href="#">Galerie</a></li>
+            <li><a href="#">Vin</a></li>
         </ul>
         <div>
-            <input class="se connecter" type="submit" value="Sign In" name="singin">
-            <input class="s'inscrire'" type="submit" value="Sign Up" name="singup">
+            <input class="se connecter" type="submit" value="se connecter" name="singin">
+            <input class="s'inscrire'" type="submit" value="s'inscrire" name="singup">
         </div>
          </div>
     </section>
@@ -43,7 +43,7 @@
          <h3>Plats populaires</h3>
           <div class ="card-list"> 
             <div class="card"> 
-                <in src="assets/entree.jpg" alt=""> 
+                <img src="assets/entree.jpg" alt=""> 
                     <div class="food-title"> 
                         <h1>Burrata</h1> 
                     </div> 
@@ -55,9 +55,9 @@
                     </div> 
                 </div> 
           <div class="card"> 
-                    <in src="assets/entree.jpg" alt=""> 
+                    <img src="assets/gnochi.jpg" alt=""> 
                         <div class="food-title"> 
-                            <h1>Burrata</h1> 
+                            <h1>Gnocchi au epinards</h1> 
                         </div> 
                         <div class="desc-food">
                             <p>Quaerat iusto digniss corporis cupid itate praes entity  
@@ -65,7 +65,29 @@
                         <div class="price"> 
                             <span>12€</span><span><i class="ri-add-circle-fill"></i></span> 
                         </div> 
-            </div> 
+                </div>
+                <div class="card"> 
+                    <img src="assets/salade.jpg" alt=""> 
+                        <div class="food-title"> 
+                            <h1>Salade</h1> 
+                        </div> 
+                        <div class="desc-food">
+                            <p>Quaerat iusto digniss corporis cupid itate praes entity  
+                        </div> 
+                        <div class="price"> 
+                            <span>$10.99</span><span><i class="ri-add-circle-fill"></i></span> 
+                        </div>  
+                        <div class="card"> 
+                            <img src="assets/pate sauce rouge.jpg" alt=""> 
+                                <div class="food-title"> 
+                                    <h1>pate a la sauce tomate</h1> 
+                                </div> 
+                                <div class="desc-food">
+                                    <p>Quaerat iusto digniss corporis cupid itate praes entity  
+                                </div> 
+                                <div class="price"> 
+                                    <span>$10.99</span><span><i class="ri-add-circle-fill"></i></span> 
+                                </div> 
         </div> 
     </section>
 </body>
