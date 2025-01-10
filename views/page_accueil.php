@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="stylesheet" href="style/page_accueil.css">
   <title href="page_toutes_les_chambres.php">La Flèche Bordeaux</title>
 </head>
@@ -26,6 +27,7 @@
 <body>
 
 
+
   <!-- Section Héros -->
   <section id="home" class="hero">
     <div class="hero-content">
@@ -36,7 +38,7 @@
   Réserver une chambre
 </button>
       <p>ou</p>
-      <button class="btn-primary" onclick="window.location.href='https://www.google.com';">Réserver une table</button>
+      <button class="btn-primary" onclick="window.location.href='page_restaurants.php';">Réserver une table</button>
     </div>
   </section>
 
