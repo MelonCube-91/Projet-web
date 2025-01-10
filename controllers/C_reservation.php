@@ -1,20 +1,27 @@
 <?php
-require "../Models/m_reservation.php";
+require '../models/M_Reservation.php';
+
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id_service = (int) $_POST['id_service'];
-    $type_service = $_POST['type_service'];
-    $date = $_POST['date'];
+    $typeService = $_POST['type_service'];
+    $idService = $_POST['id_service'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
+    $dateReservation = $_POST['date_reservation'];
 
-    $reservation_success = ajouter_reservation($id_service, $type_service, $date, $nom, $prenom, $email);
+    $reservationModel = new M_Reservation();
 
-    if ($reservation_success) {
-        echo "Réservation effectuée avec succès pour un(e) " . htmlspecialchars($type_service) . ".";
+    $result = $reservationModel->ajouterReservation($idService, $typeService, $dateReservation, $nom, $prenom, $email);
+
+    if ($result) {
+        $_SESSION['success'] = "Réservation effectuée avec succès.";
     } else {
-        echo "Erreur lors de la réservation. Veuillez réessayer.";
+        $_SESSION['error'] = "Erreur lors de la réservation.";
     }
+
+    header("Location: page_toutes_les_chambres_disponibles.php");
+    exit();
 }
 ?>

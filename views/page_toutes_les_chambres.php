@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Liste des chambres</title>
-    <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toutes les Chambres Disponibles</title>
 </head>
 <body>
-    <h1>Liste des chambres</h1>
+    <h1>Nos Chambres Disponibles</h1>
+
+    <?php if (isset($_SESSION['success'])): ?>
+        <div style="color: green;"><?php echo $_SESSION['success']; unset($_SESSION['success']); ?></div>
+    <?php endif; ?>
+
     <div class="chambres">
-    <?php
-    if (isset($chambres) && !empty($chambres)) {
-        foreach ($chambres as $chambre) {
-            echo "<div>";
-            echo "<h3>" . htmlspecialchars($chambre['type']) . "</h3>";
-            echo "<p>" . htmlspecialchars($chambre['description']) . "</p>";
-            echo "<p>Prix: " . htmlspecialchars($chambre['prix']) . "€</p>";
-            echo "<p>Disponibilité: " . ($chambre['disponibilité'] ? 'Disponible' : 'Indisponible') . "</p>";
-            echo "</div>";
-        }
-    } else {
-        echo "<p>Aucune chambre disponible.</p>";
-        }
-    ?>
+        <?php foreach ($chambres as $chambre): ?>
+            <div class="chambre">
+                <h2><?= htmlspecialchars($chambre['type']); ?></h2>
+                <p><?= htmlspecialchars($chambre['description']); ?></p>
+                <p>Prix : <?= htmlspecialchars($chambre['prix']); ?> €</p>
+                <a href="C_chambres.php?action=reserver&id=<?= $chambre['id_chambre']; ?>">Réserver</a>
+            </div>
+        <?php endforeach; ?>
     </div>
 </body>
 </html>

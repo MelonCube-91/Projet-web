@@ -1,29 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Réserver un Service</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Réserver un Service</h1>
+<form action="../controllers/C_reservation.php" method="POST">
+    <label for="type_service">Type de service :</label>
+    <select name="type_service" id="type_service" required>
+        <option value="chambre">Chambre</option>
+        <option value="massage">Massage</option>
+        <option value="plat">Plat</option>
+    </select>
 
-    <form action="../controllers/C_reservation.php" method="POST">
-        <input type="hidden" name="id_service" value="<?php echo htmlspecialchars($id_service); ?>">
-        <input type="hidden" name="type_service" value="<?php echo htmlspecialchars($type_service); ?>">
+    <label for="id_service">ID du service :</label>
+    <input type="number" name="id_service" id="id_service" required>
 
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required>
+    <label for="date_reservation">Date de réservation :</label>
+    <input type="date" name="date_reservation" id="date_reservation" required>
 
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" required>
+    <label for="nom">Nom :</label>
+    <input type="text" name="nom" id="nom" required>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
+    <label for="prenom">Prénom :</label>
+    <input type="text" name="prenom" id="prenom" required>
 
-        <label for="date">Date :</label>
-        <input type="date" id="date" name="date" required>
+    <label for="email">Email :</label>
+    <input type="email" name="email" id="email" required>
 
-        <button type="submit">Réserver</button>
-    </form>
-</body>
-</html>
+    <button type="submit">Réserver</button>
+</form>
