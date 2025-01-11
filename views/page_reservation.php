@@ -1,18 +1,25 @@
-<h2>Réserver une chambre</h2>
-<form method="POST" action="../controllers/C_reservation.php">
-    <label for="chambre_id">Type de chambre</label>
-    <select id="chambre_id" name="chambre_id">
-        <option value="1">Classique</option>
-        <option value="2">Confort</option>
-        <option value="3">Standing</option>
-        <option value="4">Suite</option>
+<form action="../controllers/C_reservation.php" method="POST">
+    <label for="type_service">Type de service :</label>
+    <select name="type_service" id="type_service" required>
+        <option value="chambre">Chambre</option>
+        <option value="massage">Massage</option>
+        <option value="plat">Plat</option>
     </select>
 
-    <label for="date_debut">Date d'arrivée</label>
-    <input type="date" id="date_debut" name="date_debut" required>
+    <label for="id_service">ID du service :</label>
+    <input type="number" name="id_service" id="id_service" required>
 
-    <label for="date_fin">Date de départ</label>
-    <input type="date" id="date_fin" name="date_fin" required>
+    <label for="date_reservation">Date de réservation :</label>
+    <input type="date" name="date_reservation" id="date_reservation" required>
 
-    <button type="submit" name="reserver">Réserver</button>
+    <label for="nom">Nom :</label>
+    <input type="text" name="nom" id="nom" required>
+
+    <label for="prenom">Prénom :</label>
+    <input type="text" name="prenom" id="prenom" required>
+
+    <label for="email">Email :</label>
+    <input type="email" name="email" id="email" required>
+
+    <button type="submit">Réserver</button>
 </form>

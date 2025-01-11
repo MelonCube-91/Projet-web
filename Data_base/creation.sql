@@ -20,17 +20,16 @@ CREATE TABLE chambre (
   nombre_total INT NOT NULL
 );
 
-CREATE TABLE réservation (
-  id_réservation INT AUTO_INCREMENT PRIMARY KEY,
-  id_utilisateur INT,
-  id_chambre INT,
-  date_arrivée DATE NOT NULL,
-  date_départ DATE NOT NULL,
-  statut VARCHAR(20) NOT NULL,
-  prix_total DECIMAL(10,2) NOT NULL,
-  FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur),
-  FOREIGN KEY (id_chambre) REFERENCES chambre(id_chambre)
+CREATE TABLE reservation (
+  id_reservation INT AUTO_INCREMENT PRIMARY KEY,
+  id_service INT NOT NULL,
+  type_service VARCHAR(50) NOT NULL,
+  date_reservation DATE NOT NULL,
+  nom VARCHAR(100) NOT NULL,
+  prenom VARCHAR(100) NOT NULL,
+  email VARCHAR(255) NOT NULL
 );
+
 
 CREATE TABLE avis (
     id_avis INT AUTO_INCREMENT PRIMARY KEY,
