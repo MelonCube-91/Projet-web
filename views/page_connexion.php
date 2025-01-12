@@ -9,6 +9,7 @@ $erreurs_inscription = [];
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
+    <link rel="stylesheet" href="style/connexion.css">
 </head>
 
 <body>
