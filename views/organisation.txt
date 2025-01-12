@@ -1,7 +1,7 @@
 Organisation du projet : 
 
 Front End : 
-Omar (page Restaurant) , 
+Omar (page Restaurant, carte restaurant, carte vin & page SPa & découvrez) , 
 Jude (page accueil, page chambre, page Connexion + UI/UX design & maquettes sur Figma),
 Yanis () + Maquette par Jude
 
