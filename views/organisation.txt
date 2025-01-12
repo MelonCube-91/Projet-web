@@ -2,7 +2,8 @@ Organisation du projet :
 
 Front End : 
 Omar (page Restaurant, carte restaurant, carte vin & page SPA /Massage) , 
-Jude & Yanis (page accueil, page chambre, page Connexion + UI/UX design, maquettes sur Figma par Jude),
+Jude (page accueil, page chambre + UI/UX design, maquettes sur Figma ),
+Yanis (page Connexion)
 
 
 Back End : Lassana (la base de donnée et les différentes fonction du site + page réservation et page qui nécessite le backend)
