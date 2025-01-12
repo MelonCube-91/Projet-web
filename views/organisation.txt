@@ -1,5 +1,8 @@
 Organisation du projet : 
 
-Front End : Omar, Jude & Yanis (les différentes pages) + Maquette par Jude
+Front End : 
+Omar (page Restaurant) , 
+Jude (page accueil, page chambre, page Connexion + UI/UX design & maquettes sur Figma),
+Yanis () + Maquette par Jude
 
-Back End : Lassana (la base de donnée et les différentes fonction du site)
+Back End : Lassana (la base de donnée et les différentes fonction du site +)
