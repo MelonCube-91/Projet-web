@@ -1,0 +1,5 @@
+Organisation du projet : 
+
+Front End : Omar, Jude & Yanis (les différentes pages) + Maquette par Jude
+
+Back End : Lassana (la base de donnée et les différentes fonction du site)
