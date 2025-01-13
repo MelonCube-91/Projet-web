@@ -37,7 +37,7 @@ CREATE TABLE avis (
     id_chambre INT,
     commentaire TEXT,
     note INT, 
-    date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
+    date_avis DATETIME DEFAULT CURRENT_TIMESTAMP,
     statut ENUM('validé', 'en attente', 'rejeté') DEFAULT 'en attente',
     FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur),
     FOREIGN KEY (id_chambre) REFERENCES chambre(id_chambre)

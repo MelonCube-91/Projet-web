@@ -31,14 +31,14 @@
   <div class="room-container">
     <!-- Première rangée -->
     <div class="room">
-      <img src="style/chambresupérieur.jpg" alt="Chambre Classique">
+      <img src="assets\chambre-de-luxe.jpg" alt="Chambre Classique">
       <h3>Chambre Classique</h3>
       <p>Un espace raffiné avec vue sur la ville.</p>
       <p>À partir de 500€ / Nuit</p>
-      <button class="btn-secondary">Réserver</button>
+      <button class="btn-secondary" href="" >Réserver</button>
     </div>
     <div class="room">
-      <img src="style/chambreexécutive.jpg" alt="Chambre Confort">
+      <img src="assets\chambresupérieur.jpg" alt="Chambre Confort">
       <h3>Chambre Confort</h3>
       <p>Pour les amoureux d’authenticité.</p>
       <p>À partir de 1000€ / Nuit</p>
@@ -48,7 +48,7 @@
 
     <!-- Deuxième rangée -->
     <div class="room">
-      <img src="style/chambregranddeluxe.jpg" alt="Chambre Standing">
+      <img src="assets\dac69ac8eea383ae30ec76101a4ebacd.jpg" alt="Chambre Standing">
       <h3>Chambre Standing </h3>
       <p>Une échappée dans l’art de vivre à la française.</p>
       <p>À partir de 2500€ / Nuit</p>
@@ -56,7 +56,7 @@
       <button class="btn-secondary">Réserver</button>
     </div>
     <div class="room">
-      <img src="style/juniorsuiteexecutive.jpg" alt="Suite ">
+      <img src="assets/chambreexécutive.jpg" alt="Suite ">
       <h3>Suite </h3>
       <p>Un charme très bordelais pour cette suite.</p>
       <p>À partir de 2950€ / Nuit</p>

@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['error'] = "Erreur lors de la réservation.";
     }
 
-    header("Location: page_toutes_les_chambres_disponibles.php");
+    header("Location: ../views/page_confirmation_reservation.php");
     exit();
 }
 ?>

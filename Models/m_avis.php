@@ -1,40 +1,49 @@
 <?php
+require 'db_connect.php'; // Fichier de connexion à la base de données
+
 function ajouter_avis($id_utilisateur, $id_chambre, $commentaire, $note) {
-    require 'db_connect.php'; 
+    global $connect; // Connexion PDO
 
-    $stmt = $connect->prepare("INSERT INTO avis (id_utilisateur, id_chambre, commentaire, note) VALUES (?, ?, ?, ?)");
-    return $stmt->execute([$id_utilisateur, $id_chambre, $commentaire, $note]);
-}
+    // SQL d'insertion
+    $sql = "INSERT INTO avis (id_utilisateur, id_chambre, commentaire, note) 
+            VALUES (:id_utilisateur, :id_chambre, :commentaire, :note)";
 
-function moderer_avis($id_avis, $statut) {
-    require 'db_connect.php';
+    // Préparer la requête
+    $stmt = $connect->prepare($sql);
     
-    $stmt = $connect->prepare("UPDATE avis SET statut = ? WHERE id_avis = ?");
-    return $stmt->execute([$statut, $id_avis]);
-}
+    // Lier les paramètres
+    $stmt->bindParam(':id_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+    $stmt->bindParam(':id_chambre', $id_chambre, PDO::PARAM_INT);
+    $stmt->bindParam(':commentaire', $commentaire, PDO::PARAM_STR);
+    $stmt->bindParam(':note', $note, PDO::PARAM_INT);
 
-function get_avis_en_attente() {
-    require 'db_connect.php';
-    
-    $stmt = $connect->prepare("SELECT * FROM avis WHERE statut = 'en attente'");
-    $stmt->execute();
-    return $stmt->fetchAll();
-}
-
-function get_utilisateur_by_id($id_utilisateur) {
-    require "db_connect.php";
-    $stmt = $connect->prepare("SELECT nom, prenom FROM Utilisateur WHERE id_utilisateur = ?");
-    $stmt->execute([$id_utilisateur]);
-    $result = $stmt->fetch();
-    return $result;
+    // Exécuter la requête
+    try {
+        $stmt->execute();
+        return true;
+    } catch (PDOException $e) {
+        // Gérer l'erreur si l'insertion échoue
+        echo "Erreur lors de l'ajout de l'avis: " . $e->getMessage();
+        return false;
+    }
 }
 
 function get_all_avis() {
-    require "db_connect.php"; // Connexion à la base de données
-    $stmt = $connect->prepare("SELECT * FROM avis"); // Requête pour récupérer tous les avis
-    $stmt->execute(); // Exécuter la requête
-    $avis = $stmt->fetchAll(); // Récupérer tous les résultats sous forme de tableau
-    return $avis; // Retourner les avis
+    global $connect; // Assurez-vous que la connexion est bien définie dans db_connect.php
+    
+    try {
+        // Récupérer tous les avis
+        $sql = "SELECT a.id_avis, a.commentaire, a.note, a.date_avis, c.nom AS chambre_nom, u.nom AS utilisateur_nom 
+                FROM avis a
+                JOIN chambre c ON a.id_chambre = c.id_chambre
+                JOIN utilisateur u ON a.id_utilisateur = u.id_utilisateur
+                ORDER BY a.date_avis DESC"; // Tri par date d'avis
+        $stmt = $connect->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); // Récupère tous les résultats sous forme de tableau associatif
+    } catch (PDOException $e) {
+        echo "Erreur lors de la récupération des avis : " . $e->getMessage();
+    }
 }
 ?>
 
