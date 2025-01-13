@@ -6,6 +6,41 @@
     <title>Salon de Massage - Luxe et Relaxation</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
+
+          
+  /* Header */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(174, 133, 83);
+    padding: 15px 30px;
+    color: white;
+    
+  }
+ 
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #FFD700;
+  }
+  
         /* Reset de base */
         * {
             margin: 0;
@@ -153,10 +188,46 @@
                 font-size: 0.9rem;
             }
         }
+
+ /* Footer */
+footer {
+  background-color: rgb(174, 133, 83);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .form-container {
+      flex-direction: column;
+  }
+
+  .form-container form {
+      width: 100%;
+  }
+}
     </style>
 </head>
 <body>
     <header>
+   
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">La Flèche d'Argent Bordeaux</div>
+   
+    <ul class="nav-links">
+      <li><a href="page_accueil.php">Accueil</a></li>
+      <li><a href="page_toutes_les_chambres.php">Chambres</a></li>
+      <li><a href="page_restaurants.php">Restaurant</a></li>
+      <li><a href="page_spa.php">Massages</a></li>
+     
+      <li><a href="page_connexion.php">Connexion</a></li>
+    </ul>
+  </nav>
+
+
         <h1>Salon de Massage Luxe et Relaxation</h1>
         <p>Offrez-vous une expérience unique de bien-être et de sérénité</p>
     </header>
@@ -241,4 +312,9 @@
         });
     </script>
 </body>
+<footer>
+    <div class="footer">
+  <p>© 2025 La flèche d'Argent. Tous droits réservés.</p>
+  </div>
+</footer>
 </html>

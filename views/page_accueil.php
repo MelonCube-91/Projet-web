@@ -22,15 +22,9 @@ if (session_status() === PHP_SESSION_NONE) {
     <ul class="nav-links">
       <li><a href="page_toutes_les_chambres.php">Chambres</a></li>
       <li><a href="#services">Restaurant</a></li>
-      <li><a href="../views/page_spa.php">Massages</a></li>
-
-      <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true): ?>
-        <li><a href="page_profil.php">Mon Profil</a></li>
-        <li><a href="../Controllers/logout.php">Déconnexion</a></li>
-      <?php else: ?>
-        <li><a href="../views/page_connexion.php">Connexion</a></li>
-        <li><a href="../views/page_inscription.php">S'inscrire</a></li>
-      <?php endif; ?>
+      <li><a href="#contact">Massages</a></li>
+     
+      <li><a href="page_connexion.php">Connexion</a></li>
     </ul>
   </nav>
 </header>
